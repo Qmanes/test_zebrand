@@ -1,0 +1,1307 @@
+{
+	"info": {
+		"_postman_id": "e6c11d26-d303-43f3-8a46-35d48ebf40be",
+		"name": "zebrands",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/item/find?item_id=cbda2d42-b42e-11ec-bb72-0242ac150004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"item",
+								"find"
+							],
+							"query": [
+								{
+									"key": "item_id",
+									"value": "cbda2d42-b42e-11ec-bb72-0242ac150004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/item/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"item",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4NzU0MywianRpIjoiY2E4MWVlYjktMDZlYy00NDhhLWI4ZGMtYTY4ZDRiODRiYzMxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4NzU0MywiZXhwIjoxNjQ5MDg4NDQzfQ.HGsfPXq1zpdI0meYbDLYQCoyzQSPq7hK5dgllg2d7Ns",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\" : \"Nike000003\",\n    \"name\" : \"Zapatos nasd\",\n    \"price\" : 152.12,\n    \"brand_id\" : \"103387a0-b429-11ec-af12-0242ac150003\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/item/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"item",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4NzU0MywianRpIjoiY2E4MWVlYjktMDZlYy00NDhhLWI4ZGMtYTY4ZDRiODRiYzMxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4NzU0MywiZXhwIjoxNjQ5MDg4NDQzfQ.HGsfPXq1zpdI0meYbDLYQCoyzQSPq7hK5dgllg2d7Ns",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\" : \"6153bee2-b42f-11ec-9120-0242ac150004\",\n    \"sku\" : \"NIKE000003\",\n    \"name\" : \"Zapatos edit\",\n    \"price\" : 152.12,\n    \"brand_id\" : \"103387a0-b429-11ec-af12-0242ac150003\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/item/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"item",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4Nzg0MiwianRpIjoiYzU5NzJiMTMtNDQyMS00OGMyLTg4ZGEtZmQ3ZTkxZWJmZDgzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4Nzg0MiwiZXhwIjoxNjQ5MDg4NzQyfQ.9y2JP4fK4VRZ5uBcrCEJs2TtRnPDOX8pg-aEL42rf64",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\" : \"6153bee2-b42f-11ec-9120-0242ac150004\"\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost/item/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"item",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/user/find?user_id=320d59a8-b42b-11ec-94cb-0242ac150004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"find"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "320d59a8-b42b-11ec-94cb-0242ac150004"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/user/find?user_id=548f23d2-b2f8-11ec-907f-0242ac150003",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"user",
+										"find"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "548f23d2-b2f8-11ec-907f-0242ac150003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 04:05:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"uid\": \"548f23d2-b2f8-11ec-907f-0242ac150003\",\n        \"fullname\": \"Rafael Licett\",\n        \"email\": \"rafael.licettt@gmail.com\",\n        \"password\": \"123\",\n        \"type\": \"admin\",\n        \"status\": \"Active\"\n    },\n    \"status\": 200,\n    \"msg\": \"User Find\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 04:05:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "386"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uid\": \"548f23d2-b2f8-11ec-907f-0242ac150003\",\n            \"fullname\": \"Rafael Licett\",\n            \"email\": \"rafael.licettt@gmail.com\",\n            \"password\": \"123\",\n            \"type\": \"admin\",\n            \"status\": \"Active\"\n        },\n        {\n            \"uid\": \"5c022b8c-b2f8-11ec-907f-0242ac150003\",\n            \"fullname\": \"Rafael Licett\",\n            \"email\": \"rafael.licettt@gmail.com\",\n            \"password\": \"123\",\n            \"type\": \"admin\",\n            \"status\": \"Active\"\n        }\n    ],\n    \"status\": 200,\n    \"msg\": \"User All\"\n}"
+						}
+					]
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4NTYyMiwianRpIjoiMDRmMDJlYmEtNWY1OS00NTA4LWI2ODMtODE4YWY1M2RlZWIzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4NTYyMiwiZXhwIjoxNjQ5MDg2NTIyfQ.rkS6pOBfqhyXmetbZ1a_NVv0z8xctIi8dH0QjGK-cFg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"usuario.tres@hotmail.com\",\n    \"fullname\" : \"Rafael tres\",\n    \"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/user/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rafael.licettt@gmail2.com\",\n    \"fullname\" : \"Rafael Licett\",\n    \"password\" : \"123\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost/user/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"user",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 04:08:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"uid\": \"acc0109c-b303-11ec-838b-0242ac150003\",\n        \"fullname\": \"Rafael Licett\",\n        \"email\": \"rafael.licettt@gmail2.com\",\n        \"password\": \"123\",\n        \"type\": \"admin\",\n        \"status\": \"Active\"\n    },\n    \"status\": 200,\n    \"msg\": \"User save\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"320d59a8-b42b-11ec-94cb-0242ac150004\",\n    \"fullname\" : \"User name trhee\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : \"320d59a8-b42b-11ec-94cb-0242ac150004\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/brand/find?brand_id=21c0f5b6-b429-11ec-af12-0242ac150003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brand",
+								"find"
+							],
+							"query": [
+								{
+									"key": "brand_id",
+									"value": "21c0f5b6-b429-11ec-af12-0242ac150003"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/brand/find?brand_id=586b2060-b2f7-11ec-8542-0242ac150003",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"brand",
+										"find"
+									],
+									"query": [
+										{
+											"key": "brand_id",
+											"value": "586b2060-b2f7-11ec-8542-0242ac150003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 03:52:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"status\": \"Active\",\n        \"uid\": \"586b2060-b2f7-11ec-8542-0242ac150003\",\n        \"name\": \"brand edit really\"\n    },\n    \"status\": 200,\n    \"msg\": \"brand Find\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4NjYwMywianRpIjoiYzNkYWZiOTAtNGExZi00ZjQ1LTkzZTUtZmVmNTBlZjI3MDU2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4NjYwMywiZXhwIjoxNjQ5MDg3NTAzfQ.ZuJzcZshXZINesvqtOn-gWx6FP20Oc8a21KgaG0ZLT4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/brand/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brand",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/brand/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"brand",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 03:59:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"status\": \"Active\",\n            \"uid\": \"586b2060-b2f7-11ec-8542-0242ac150003\",\n            \"name\": \"brand edit really\"\n        },\n        {\n            \"status\": \"Active\",\n            \"uid\": \"d58cfa46-b301-11ec-8aaa-0242ac150003\",\n            \"name\": \"brand Edit\"\n        },\n        {\n            \"status\": \"Active\",\n            \"uid\": \"e2e84c0e-b301-11ec-8aaa-0242ac150003\",\n            \"name\": \"update on postman\"\n        }\n    ],\n    \"status\": 200,\n    \"msg\": \"brand All\"\n}"
+						}
+					]
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4NDg0NywianRpIjoiNmRiZGQyMmYtYTJmYi00NjM2LTg1YmEtNjZmZDhiYWFlNTE0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4NDg0NywiZXhwIjoxNjQ5MDg1NzQ3fQ.7Wlw5MnjeHjNLrM5kOeCOj_HHQCe1KFa_0cMs3Qi6Kw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"paseo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/brand/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brand",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"brand on postman\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/brand/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"brand",
+										"save"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 03:55:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"status\": \"Active\",\n        \"uid\": \"e2e84c0e-b301-11ec-8aaa-0242ac150003\",\n        \"name\": \"brand on postman\"\n    },\n    \"status\": 200,\n    \"msg\": \"brand save\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand_id\": \"21c0f5b6-b429-11ec-af12-0242ac150003\",\n    \"name\": \"Umbro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/brand/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brand",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand_id\": \"e2e84c0e-b301-11ec-8aaa-0242ac150003\",\n    \"name\": \"update on postman\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/brand/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"brand",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 03:58:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"status\": \"Active\",\n        \"uid\": \"e2e84c0e-b301-11ec-8aaa-0242ac150003\",\n        \"name\": \"update on postman\"\n    },\n    \"status\": 200,\n    \"msg\": \"brand Edit\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA0MTQyNCwianRpIjoiOWJmMzY5NWQtNTQxNS00Njc2LWIxOTctMWU2NWQ2ODhiZmIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjA1Y2VhOGFjLWIzYTgtMTFlYy1hMGVlLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA0MTQyNH0.giPSbUDCWVM11jhMtAQ-uNX5vcD-O8HalWNtgJf6zFM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brand_id\": \"52cb5354-b429-11ec-af12-0242ac150003\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/brand/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brand",
+								"delete"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"brand_id\": \"4facdcac-b2f7-11ec-8420-0242ac150003\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/brand/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"brand",
+										"delete"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 03:59:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"status\": 200,\n    \"msg\": \"brand Delete\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "stadistic",
+			"item": [
+				{
+					"name": "item_view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4Nzk3MiwianRpIjoiY2FiYTI2NjMtYjU5ZS00OTk0LThiOWQtY2EzOGQxNWVkMDlkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImQzZTMyNThhLWI0MjgtMTFlYy1hZjEyLTAyNDJhYzE1MDAwMyIsIm5iZiI6MTY0OTA4Nzk3MiwiZXhwIjoxNjQ5MDg4ODcyfQ.2oan-CHtir_KBPvT1X3H9PJBB-q96fBGwqIEwMB6zCI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/stadistic/item-view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"stadistic",
+								"item-view"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4ODIyNCwianRpIjoiNzRlMzAyMTktODcxNS00M2QxLWI0MDQtN2RhNTdhZTg4MjkzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEwZGE5OWY4LWI0MmItMTFlYy05NGNiLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA4ODIyNCwiZXhwIjoxNjQ5MDg5MTI0fQ.s-NuA-KgBiRx-RIXeyqyRExBQR0lV4QHWcd3IMfrYdI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/notification/find?notification_id=59bc7a20-b42f-11ec-9120-0242ac150004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"notification",
+								"find"
+							],
+							"query": [
+								{
+									"key": "notification_id",
+									"value": "59bc7a20-b42f-11ec-9120-0242ac150004"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/user/find?user_id=548f23d2-b2f8-11ec-907f-0242ac150003",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"user",
+										"find"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "548f23d2-b2f8-11ec-907f-0242ac150003"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 04:05:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"uid\": \"548f23d2-b2f8-11ec-907f-0242ac150003\",\n        \"fullname\": \"Rafael Licett\",\n        \"email\": \"rafael.licettt@gmail.com\",\n        \"password\": \"123\",\n        \"type\": \"admin\",\n        \"status\": \"Active\"\n    },\n    \"status\": 200,\n    \"msg\": \"User Find\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTA4ODA2OCwianRpIjoiNTY2ZGJkN2ItNmExMC00MGJlLTk1MzctYTI5ZDg0YjQyNDFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEwZGE5OWY4LWI0MmItMTFlYy05NGNiLTAyNDJhYzE1MDAwNCIsIm5iZiI6MTY0OTA4ODA2OCwiZXhwIjoxNjQ5MDg4OTY4fQ.n8cMZP9l_50MGE0iRhGhr7Fec6VDx5AdIo3m1c0iC3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/notification/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"notification",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.1.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Apr 2022 04:05:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "386"
+								},
+								{
+									"key": "mimetype",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"uid\": \"548f23d2-b2f8-11ec-907f-0242ac150003\",\n            \"fullname\": \"Rafael Licett\",\n            \"email\": \"rafael.licettt@gmail.com\",\n            \"password\": \"123\",\n            \"type\": \"admin\",\n            \"status\": \"Active\"\n        },\n        {\n            \"uid\": \"5c022b8c-b2f8-11ec-907f-0242ac150003\",\n            \"fullname\": \"Rafael Licett\",\n            \"email\": \"rafael.licettt@gmail.com\",\n            \"password\": \"123\",\n            \"type\": \"admin\",\n            \"status\": \"Active\"\n        }\n    ],\n    \"status\": 200,\n    \"msg\": \"User All\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "setup",
+			"item": [
+				{
+					"name": "autosetup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/setup/auto-setup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"setup",
+								"auto-setup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usuario.uno@hotmail.com\",\n    \"password\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
