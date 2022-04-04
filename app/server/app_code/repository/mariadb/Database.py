@@ -4,7 +4,7 @@ class Connection():
 
     def __init__(self):
 
-        self.config = {'host': 'mysqldb','port': 3306,'user': 'root','password': 'wRacgZTnJgYZTr4NfM9PA3m4289MXC4GCa6UJdDNLeYALKZbDF','database': 'zebrands'}
+        self.config = {'host': 'mysqldb','port': 3306,'user': 'root','password': 'yourSAFEpassword','database': 'zebrands'}
         self.connection = mariadb.connect(**self.config)
         self.cursor = self.connection.cursor()
 

@@ -30,10 +30,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: wRacgZTnJgYZTr4NfM9PA3m4289MXC4GCa6UJdDNLeYALKZbDF
+      MYSQL_ROOT_PASSWORD: yourSAFEpassword
       MYSQL_DATABASE: zebrands
       MYSQL_USER: me
-      MYSQL_PASSWORD: wRacgZTnJgYZTr4NfM9PA3m4289MXC4GCa6UJdDNLeYALKZbDF
+      MYSQL_PASSWORD: yourSAFEpassword
     volumes:
       - ./db:/var/lib/mysql
   phpmyadmin:
