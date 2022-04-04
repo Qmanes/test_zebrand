@@ -1,0 +1,48 @@
+#version: "3.7"
+#services:
+#  database:
+#    image: mariadb:10.8.2
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=password
+#
+#  app:
+#    build: app
+#    ports:
+#      - 8080:5000
+#    restart: always
+
+version: "3.4"
+services:
+  webserver:
+    build:
+      context: ./app
+    ports:
+      - "80:5000"
+    links:
+      - mysqldb
+    restart: 'always'
+    volumes:
+      - ./app/server:/server
+  mysqldb:
+    image: mysql:latest
+    restart: 'always'
+    entrypoint: ['/entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: wRacgZTnJgYZTr4NfM9PA3m4289MXC4GCa6UJdDNLeYALKZbDF
+      MYSQL_DATABASE: zebrands
+      MYSQL_USER: me
+      MYSQL_PASSWORD: wRacgZTnJgYZTr4NfM9PA3m4289MXC4GCa6UJdDNLeYALKZbDF
+    volumes:
+      - ./db:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: 'Phpmyadmin'
+    links:
+      - mysqldb
+    environment:
+      PMA_HOST: mysqldb
+      PMA_PORT: 3306
+    ports:
+      - '800:80'
