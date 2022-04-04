@@ -21,3 +21,4 @@ requisitos:
   
  7. se crearon servicios para pover visualizar las notificaciondes del administrador como tambien las estadisticas
 
+ 8. para ejecutar las pruebas unitarias en la raiz de la carpeta server ejecutar el comando: pytest
