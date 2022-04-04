@@ -9,7 +9,7 @@ EXECUTE = Execute(TABLE, Notification, "Notification")
 
 def find_or_fail(notification_id, user_id):
 
-    condition = "uid = '{}' and user_to = '{}' and status!= 'Delete'".format(notification_id, user_id)
+    condition = "uid = '{}' and user_to = '{}' and status != 'Delete'".format(notification_id, user_id)
     
     result =  EXECUTE.find_one(condition)
 
@@ -17,6 +17,8 @@ def find_or_fail(notification_id, user_id):
 
         raise NotFoundException("User Admin")
 
+    return result
+    
 def update(user_id, notification):
 
     data = "status = '{}'".format(notification.status)
